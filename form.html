@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Aqualinkbd ltd</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Data table cdn -->
+    
+   
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- navbar -->
+
+       <nav class="navbar fixed-top navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+            <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+            <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" style="border-color: white;border-width: 2px">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            	
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="user-dropdown">
+                            <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                                <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </nav>
+       
+    <div id="content">
+
+    <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="leftCol">
+                <div class="active">
+            <ul  class="list-unstyled  components text-capitalize">
+                
+                <p><i class="fa fa-users" aria-hidden="true"></i>EMPLOYEE</p>
+                <li>
+                    <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i>report</a>
+                    <ul class="collapse list-unstyled" id="reportSubmenu">
+                        <li>
+                             <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>daily</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>weekly</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>monthly</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>log</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#groupSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-users" aria-hidden="true"></i>user group</a>
+                    <ul class="collapse list-unstyled" id="groupSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>user group access</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add user group</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#companySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-building-o" aria-hidden="true"></i>company</a>
+                    <ul class="collapse list-unstyled" id="companySubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>all company</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#departSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>departments</a>
+                    <ul class="collapse list-unstyled" id="departSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>all department</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add department</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                   <a href="#timeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>office time</a>
+                    <ul class="collapse list-unstyled" id="timeSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>regular</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>roster</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add new office time</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                   <a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>employee</a>
+                    <ul class="collapse list-unstyled" id="employeeSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add new employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>prsent employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>removed employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>rfid card</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>fingerprints</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-desktop" aria-hidden="true"></i>DEVICE</p>
+                    <li>
+                        <a href="#deviceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-tablet" aria-hidden="true"></i>my device</a>
+                        <ul class="collapse list-unstyled" id="deviceSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>assigned device</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>device access</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#eventSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>employee events</a>
+                        <ul class="collapse list-unstyled" id="eventSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>today events</a>
+                            </li>
+                        
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>single event update</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>bulk upload</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-calendar-o" aria-hidden="true"></i>HOLIDAY</p>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>holiday
+                        </a>
+                    </li>
+                </div>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-plus-circle" aria-hidden="true"></i>EXTRA</p>
+                    <li>
+                        <a href="#leaveSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>leave request</a>
+                        <ul class="collapse list-unstyled" id="leaveSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>leave category</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>leave application</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+                
+                    <li>
+                        <a href="#dutySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>duty roster</a>
+                        <ul class="collapse list-unstyled" id="dutySubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>departments</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>duty change</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>request</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#payrollSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-users" aria-hidden="true"></i>payroll</a>
+                        <ul class="collapse list-unstyled" id="payrollSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>payroll rule</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>salary</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file" aria-hidden="true"></i>work report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#kpiSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>kpi</a>
+                        <ul class="collapse list-unstyled" id="kpiSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>supervisors</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>employee</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>rules</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>record</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="list-unstyled text-capitalize full-hidden">
+                    <p><i class="fa fa-user-circle" aria-hidden="true"></i>NAVBAR MENU</p>
+                    <li>
+                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i>profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>log out</a>
+                    </li> 
+                </div>
+            </ul>
+        </div>
+            </div>
+        </nav>
+
+    <div id="main-content">
+
+    <!-- Page Content  -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-dark">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form</li>
+            </ol>
+        </nav>
+
+        <ul class="nav nav-pills nav-justified bg-dark mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active nav-link-form-pill" id="pills-home-tab" data-toggle="" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Employee</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-profile-tab" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Career</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-tab" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Supervisor</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-1-tab" href="#pills-contact-1" role="tab" aria-controls="pills-contact-1" aria-selected="false">Education</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-2-tab" href="#pills-contact-2" role="tab" aria-controls="pills-contact-2" aria-selected="false">Training</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-3-tab" href="#pills-contact-3" role="tab" aria-controls="pills-contact-3" aria-selected="false">Certificates</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-4-tab" href="#pills-contact-4" role="tab" aria-controls="pills-contact-4" aria-selected="false">Experience</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-5-tab" href="#pills-contact-5" role="tab" aria-controls="pills-contact-5" aria-selected="false">Referenc</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link nav-link-form-pill" id="pills-contact-6-tab" href="#pills-contact-6" role="tab" aria-controls="pills-contact-6" aria-selected="false">Nominee</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active tab-pane-form-pill" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <form class="needs-validation" novalidate>
+                    <div class="form-row mt-5" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                        <label class="col-sm-1" for="avater">Avater</label>
+                        <div class="col-sm-5">
+                            <div class="file-field">
+                                <div class="mb-3">
+                                    <img src="images/man1.jpeg"
+                                    class="img-thumbnail rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+                                </div>
+                                <div class="d-flex justify-content-center float-left">
+                                    <div class="btn btn-secondary btn-rounded">
+                                        <span>Add photo</span>
+                                        <input type="file" id="avater" aria-describedby="avaterFeedback" required>
+                                        <div id="avaterFeedback" class="invalid-tooltip">
+                                            Please provide a valid picture.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>s
+                    </div>
+                    <div class="form-row mt-5" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer01">Name</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="validationServer01" placeholder="First name" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                            <div class="invalid-tooltip">
+                                Looks bad!
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" placeholder="Last name" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                            <div class="invalid-tooltip">
+                                Looks bad!
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer02">Address</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="validationServer02" aria-describedby="validationServer02Feedback" required>
+                            <div id="validationServer03Feedback" class="invalid-tooltip">
+                                Please provide a valid address.
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer06">Permanent Address</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="validationServer06" aria-describedby="validationServer06Feedback" required>
+                            <div id="validationServer03Feedback" class="invalid-tooltip">
+                                Please provide a valid address.
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer03">City</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                            <div id="validationServer03Feedback" class="invalid-tooltip">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer04">State</label>
+                        <div class="col-sm-4">
+                            <select class="custom-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                            <div id="validationServer04Feedback" class="invalid-tooltip">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer05">Zip</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                            <div id="validationServer05Feedback" class="invalid-tooltip">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                     <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer07">Gender</label>
+                        <div class="col-sm-4">
+                            <select class="custom-select" id="validationServer07" aria-describedby="validationServer07Feedback" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            <div id="validationServer04Feedback" class="invalid-tooltip">
+                                Please select a valid gender.
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 35px;">
+                        <div class="col-sm-3"></div>
+                            <label class="col-sm-1" for="validationServer08">Contact Phone</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="validationServer08" placeholder="01........."aria-describedby="validationServer08Feedback" required>
+                            <div id="validationServer08Feedback" class="invalid-tooltip">
+                                Please provide a valid contact number.
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-row mt-5 mb-5">
+                        <div class="col-sm-4"></div>
+                            <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                                <label class="form-check-label" for="invalidCheck3">
+                                Agree to terms and conditions
+                                </label>
+                                <div  id="invalidCheck3Feedback" class="invalid-tooltip">
+                                You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4"></div>
+                        <button class="btn btn-secondary" type="submit">Submit form</button>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-right mt-5 mb-5 mr-5">
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary ">Sign in</button>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email3</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password3</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-1" role="tabpanel" aria-labelledby="pills-contact-1-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email4</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password4</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+               <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-2" role="tabpanel" aria-labelledby="pills-contact-2-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email5</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password5</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-3" role="tabpanel" aria-labelledby="pills-contact-3-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email6</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password6</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-4" role="tabpanel" aria-labelledby="pills-contact-4-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email7</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password7</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-5" role="tabpanel" aria-labelledby="pills-contact-5-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email8</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password8</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark mr-2">Prev</button>
+                        <button class="next-form-pill btn btn-dark">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade tab-pane-form-pill" id="pills-contact-6" role="tabpanel" aria-labelledby="pills-contact-6-tab"> 
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email9</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password9</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </form>
+               <div class="container">
+                    <div class="float-md-right float-sm-right mt-5 mb-5 mr-5">
+                        <button class="prev-form-pill btn btn-dark">Prev</button>
+                </div>
+            </div>
+    </div>
+</div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Data table js -->
+    <script type="text/javascript" src="script.js"></script>
+
+    <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+
+        (function(){
+          
+          var i;
+          var items = $('.nav-link-form-pill');
+          var pane = $('.tab-pane-form-pill');
+
+          // next
+          $('.next-form-pill').on('click', function(){
+              for(i = 0; i < items.length; i++){
+                  if($(items[i]).hasClass('active') == true){
+                      break;
+                  }
+              }
+              if(i < items.length - 1) {
+                  // for tab
+                  $(items[i]).removeClass('active');
+                  $(items[i+1]).addClass('active');
+                  // for pane
+                  $(pane[i]).removeClass('show active');
+                  $(pane[i+1]).addClass('show active');
+              }
+          });
+
+          // Prev
+          $('.prev-form-pill').on('click',function() {
+              for(i = 0; i < items.length; i++){
+                  if($(items[i]).hasClass('active') ==true){
+                      break;
+                  }
+              }
+              if(i != 0){
+                  // for tab
+                  $(items[i]).removeClass('active');
+                  $(items[i-1]).addClass('active');
+                  // for pane
+                  $(pane[i]).removeClass('show active');
+                  $(pane[i-1]).addClass('show active');
+              }
+          });
+        })();
+    </script>
+</body>
+
+</html>

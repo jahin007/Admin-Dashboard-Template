@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Widget design</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- navbar -->
+
+       <nav class="navbar fixed-top navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+            <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            	
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="user-dropdown">
+                            <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                                <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </nav>
+       
+        <div id="content">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="leftCol">
+                <div class="active">
+            <ul  class="list-unstyled  components text-capitalize">
+                
+                <p><i class="fa fa-users" aria-hidden="true"></i>EMPLOYEE</p>
+                <li>
+                    <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i>report</a>
+                    <ul class="collapse list-unstyled" id="reportSubmenu">
+                        <li>
+                             <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>daily</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>weekly</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>monthly</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>log</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#groupSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-users" aria-hidden="true"></i>user group</a>
+                    <ul class="collapse list-unstyled" id="groupSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>user group access</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add user group</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#companySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-building-o" aria-hidden="true"></i>company</a>
+                    <ul class="collapse list-unstyled" id="companySubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>all company</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#departSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>departments</a>
+                    <ul class="collapse list-unstyled" id="departSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>all department</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add department</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                   <a href="#timeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>office time</a>
+                    <ul class="collapse list-unstyled" id="timeSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>regular</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>roster</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add new office time</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                   <a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>employee</a>
+                    <ul class="collapse list-unstyled" id="employeeSubmenu">
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>add new employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>prsent employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>removed employee</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>rfid card</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>fingerprints</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-desktop" aria-hidden="true"></i>DEVICE</p>
+                    <li>
+                        <a href="#deviceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-tablet" aria-hidden="true"></i>my device</a>
+                        <ul class="collapse list-unstyled" id="deviceSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>assigned device</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>device access</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#eventSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>employee events</a>
+                        <ul class="collapse list-unstyled" id="eventSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>today events</a>
+                            </li>
+                        
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>single event update</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>bulk upload</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-calendar-o" aria-hidden="true"></i>HOLIDAY</p>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>holiday
+                        </a>
+                    </li>
+                </div>
+
+
+                <div class="list-unstyled text-capitalize">
+                    <p><i class="fa fa-plus-circle" aria-hidden="true"></i>EXTRA</p>
+                    <li>
+                        <a href="#leaveSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>leave request</a>
+                        <ul class="collapse list-unstyled" id="leaveSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>leave category</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>leave application</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+                
+                    <li>
+                        <a href="#dutySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>duty roster</a>
+                        <ul class="collapse list-unstyled" id="dutySubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>departments</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>duty change</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>request</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#payrollSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-users" aria-hidden="true"></i>payroll</a>
+                        <ul class="collapse list-unstyled" id="payrollSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>payroll rule</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>salary</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file" aria-hidden="true"></i>work report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#kpiSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>kpi</a>
+                        <ul class="collapse list-unstyled" id="kpiSubmenu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>supervisors</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>employee</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>rules</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>record</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="list-unstyled text-capitalize full-hidden">
+                    <p><i class="fa fa-user-circle" aria-hidden="true"></i>NAVBAR MENU</p>
+                    <li>
+                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i>profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>log out</a>
+                    </li> 
+                </div>
+            </ul>
+        </div>
+            </div>
+        </nav>
+
+    <div id="main-content">
+
+    <!-- witged  -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-dark">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Witged</li>
+          </ol>
+        </nav>
+
+    <h3 class="mt-2 mb-3">Info box</h3>
+
+    <!-- Info-box start-->
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box">
+                        <span class="info-box-icon align-items-center justify-content-center bg-info"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content justify-content-center">
+                            <span class="info-box-text">Messages</span>
+                            <span class="info-box-number">1,410</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box">
+                        <span class="info-box-icon align-items-center justify-content-center bg-success"><i class="fa fa-flag" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content justify-content-center">
+                            <span class="info-box-text">Bookmarks</span>
+                            <span class="info-box-number">410</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box">
+                        <span class="info-box-icon align-items-center justify-content-center bg-warning"><i class="fa fa-files-o" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content justify-content-center">
+                            <span class="info-box-text">Uploads</span>
+                            <span class="info-box-number">13,648</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box">
+                        <span class="info-box-icon align-items-center justify-content-center bg-danger"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content justify-content-center">
+                            <span class="info-box-text">Likes</span>
+                            <span class="info-box-number">93,139</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info-box end -->
+
+    <h3 class="mt-2 mb-3">Info box with bg</h3>
+
+        <!-- Info-box with bg start -->
+
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box bg-info">
+                        <span class="info-box-icon align-items-center justify-content-center"><i class="fa fa-bookmark" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content info-color justify-content-center">
+                            <span class="info-box-text">Bookmarks</span>
+                            <span class="info-box-number">41,410</span>
+
+                            <div class="progress">
+                                <div class="progress-bar justify-content-center" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-description">
+                             70% Increase in 30 Days
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box bg-success">
+                        <span class="info-box-icon align-items-center justify-content-center"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content info-color justify-content-center">
+                            <span class="info-box-text">Likes</span>
+                            <span class="info-box-number">41,410</span>
+
+                            <div class="progress">
+                                <div class="progress-bar justify-content-center" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-description">
+                            70% Increase in 30 Days
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box bg-warning">
+                        <span class="info-box-icon align-items-center justify-content-center"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content info-color justify-content-center">
+                            <span class="info-box-text">Events</span>
+                            <span class="info-box-number">41,410</span>
+
+                            <div class="progress">
+                                <div class="progress-bar justify-content-center" style="width: 70%"></div>
+                            </div>
+                                <span class="progress-description">
+                                70% Increase in 30 Days
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="info-box bg-danger">
+                        <span class="info-box-icon align-items-center justify-content-center"><i class="fa fa-comments" aria-hidden="true"></i></span>
+
+                        <div class="info-box-content info-color justify-content-center">
+                            <span class="info-box-text">Comments</span>
+                            <span class="info-box-number">41,410</span>
+
+                            <div class="progress">
+                                <div class="progress-bar justify-content-center" style="width: 70%"></div>
+                            </div>
+                                <span class="progress-description">
+                                70% Increase in 30 Days
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info-box with bg end -->
+
+
+    <h3 class="mt-2 mb-3">Small box without bg</h3>
+
+        <!-- Small-box without bg start -->
+
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box">
+                        <div class="inner-p small-color">
+                            <h3>150</h3>
+
+                            <p>New Orders</p>
+                        </div>
+                        <div class="icon-i" style="color: #17a2b8">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box">
+                        <div class="inner-p small-color">
+                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                            <p>Bounce Rate</p>
+                        </div>
+                        <div class="icon-i" style="color: #28a745">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box">
+                        <div class="inner-p small-color">
+                            <h3>44</h3>
+
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon-i" style="color: #ffc107">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box">
+                        <div class="inner-p small-color">
+                            <h3>65</h3>
+
+                            <p>Unique Visitors</p>
+                        </div>
+                        <div class="icon-i" style="color: #dc3545">
+                            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small-box without bg end -->
+
+    <h3 class="mt-2 mb-3">Small box</h3>
+
+
+        <!-- Small-box start -->
+
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>150</h3>
+
+                            <p>New Orders</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">
+                            More info <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                            <p>Bounce Rate</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                            <a href="#" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>44</h3>
+
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </div>
+                            <a href="#" class="small-box-footer">
+                            More info <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>65</h3>
+
+                            <p>Unique Visitors</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small-box end -->
+
+    <h3 class="mt-2 mb-3">Card box</h3>
+
+
+        <!-- Card-box start -->
+
+        <div class="col-12 ">
+            <div class="row ">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card l-bg-cherry">
+                        <div class="card-statistic-3 p-4">
+                            <div class="card-icon card-icon-large"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="card-title mb-0">New Orders</h5>
+                            </div>
+                            <div class="row align-items-center mb-2 d-flex">
+                                <div class="col-8">
+                                     <h2 class="d-flex align-items-center mb-0">
+                                        3,243
+                                    </h2>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <span>12.5% <i class="fa fa-arrow-up"></i></span>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                <div class="progress-bar l-bg-pink" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card l-bg-blue-dark">
+                        <div class="card-statistic-3 p-4">
+                            <div class="card-icon card-icon-large"><i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="card-title mb-0">Customers</h5>
+                            </div>
+                            <div class="row align-items-center mb-2 d-flex">
+                                <div class="col-8">
+                                    <h2 class="d-flex align-items-center mb-0">
+                                        15.07k
+                                    </h2>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <span>9.23% <i class="fa fa-arrow-up"></i></span>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                <div class="progress-bar l-bg-green" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card l-bg-green-dark">
+                        <div class="card-statistic-3 p-4">
+                            <div class="card-icon card-icon-large"><i class="fa fa-ticket" aria-hidden="true"></i>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="card-title mb-0">Ticket Resolved</h5>
+                            </div>
+                            <div class="row align-items-center mb-2 d-flex">
+                                <div class="col-8">
+                                    <h2 class="d-flex align-items-center mb-0">
+                                        578
+                                 </h2>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <span>10% <i class="fa fa-arrow-up"></i></span>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card l-bg-orange-dark">
+                        <div class="card-statistic-3 p-4">
+                            <div class="card-icon card-icon-large"><i class="fa fa-usd" aria-hidden="true"></i></div>
+                            <div class="mb-4">
+                                <h5 class="card-title mb-0">Revenue Today</h5>
+                            </div>
+                            <div class="row align-items-center mb-2 d-flex">
+                                <div class="col-8">
+                                    <h2 class="d-flex align-items-center mb-0">
+                                        $11.61k
+                                    </h2>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <span>2.5% <i class="fa fa-arrow-up"></i></span>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card-box end -->
+
+        
+
+    </div>
+</div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
